@@ -8,7 +8,7 @@ module Poms
     def self.process_hash(hash)
       return unless hash
       underscored_hash = {}
-      hash.each { |k,v| underscored_hash[k.underscore] = v }
+      hash.each { |k,v| underscored_hash[k.gsub(/^_/,'').underscore] = v }
       class_name = (underscored_hash['type'] || "Typeless").capitalize
       class_name = pomsify_class_name(class_name)
       begin
