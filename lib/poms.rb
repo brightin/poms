@@ -1,9 +1,15 @@
 require 'active_support/all'
-require 'poms/media'
+require 'poms/api/media'
+require 'poms/api/search'
 require 'poms/errors/authentication_error'
 require 'json'
 
 # Main interface for the POMS gem
+#
+# Strategy
+# 1 -- Build a request object that can be executed (PostRequest || GetRequest object)
+# 2 -- Execute the request. Retry on failures (max 10?)
+# 3 -- Parse responded JSON. Extract fields if necessary
 module Poms
   extend self
   attr_reader :config
@@ -15,15 +21,14 @@ module Poms
 
   def fetch(arg)
     assert_credentials
-    if arg.is_a?(Array)
-      request = Poms::Media.multiple(arg, config)
-    elsif arg.is_a?(String)
-      request = Poms::Media.from_mid(arg, config)
-    else
-      fail 'Invalid argument passed to Poms.fetch. '\
-        'Please make sure to provide either a mid or an array of mid'
-    end
-    JSON.parse(request.get.body)
+    request = Api::Media.multiple(Array(arg), config)
+    Json.parse(request.execute.body)
+  end
+
+  def descendants(mid, search_params)
+    assert_credentials
+    request = Api::Media.descendants(mid, config, search_params)
+    JSON.parse(request.execute.body)
   end
 
   private
