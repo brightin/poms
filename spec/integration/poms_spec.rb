@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Poms do
+describe.skip Poms do
   describe '#fetch_current_broadcast' do
     let(:current_broadcast) { Poms.fetch_current_broadcast('NED3') }
 

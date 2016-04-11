@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'poms/timestamp'
 
 describe Poms::Timestamp do
   it 'converts Poms timestamps to DateTime' do
