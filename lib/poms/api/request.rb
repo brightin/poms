@@ -1,43 +1,76 @@
 require 'poms/api/auth'
+require 'net/https'
 
 module Poms
   module Api
-    # A request to the Poms API. Does the authentication and allows you to
-    # execute the request.
-    class Request
+    module RequestExecution
+      def execute_ssl_request(host, request)
+        Net::HTTP.start(host, 443, use_ssl: true) do |http|
+          http.open_timeout = 30
+          http.read_timeout = 30
+          http.request(request)
+        end
+      end
+
+      def headers
+        date = Time.now.rfc822
+        message = Auth.message(uri, credentials.origin, date)
+        encoded_message = Auth.encode(credentials.secret, message)
+        {
+          'Origin' => credentials.origin,
+          'X-NPO-Date' => date,
+          'Authorization' => "NPO #{credentials.key}:#{encoded_message}",
+          'Content-Type' => 'application/json'
+        }
+      end
+    end
+
+    class PostRequest
+      include RequestExecution
+      attr_reader :uri, :credentials, :body
+
       # Create a new request to the Poms API. The request is initialized with a
       # URI to be called and the key, secret and origin that are needed for
       # authentication.
       #
-      # @param uri The full URI to call on the Poms API
-      # @param key The api key
-      # @param secret The secret that goes with the api key
-      # @param origin The whitelisted origin for this api key
-      def initialize(uri, key, secret, origin)
+      # @param uri An instance of an Addressable::URI of the requested uri
+      # @param credentials A struct containing the poms api key, secret and origin
+      # @param body The data that is submitted in the post request body
+      def initialize(uri, credentials, body: {})
         @uri = uri
-        @path = URI(@uri).path
-        @key = key
-        @secret = secret
-        @origin = origin
+        @credentials = credentials
+        @body = body
       end
 
-      # Executes the request.
-      def call
-        open(@uri, headers)
+      # Executes a POST request with post body
+      def execute
+        req = Net::HTTP::Post.new(uri.path)
+        req.body = body.to_json
+        headers.each { |key, val| req[key] = val }
+        execute_ssl_request(uri.host, req)
+      end
+    end
+
+    # Create a new request to the Poms API. The request is initialized with a
+    # URI to be called and the key, secret and origin that are needed for
+    # authentication.
+    #
+    # @param uri An instance of an Addressable::URI of the requested uri
+    # @param credentials A struct containing the poms api key, secret and origin
+    class GetRequest
+      include RequestExecution
+      attr_reader :uri, :credentials
+
+      def initialize(uri, credentials)
+        @uri = uri
+        @credentials = credentials
       end
 
-      private
-
-      def headers
-        date = Time.now.rfc822
-        origin = @origin
-        message = Auth.message(@path, @origin, date)
-        encoded_message = Auth.encode(@secret, message)
-        {
-          'Origin' => origin,
-          'X-NPO-Date' => date,
-          'Authorization' => "NPO #{@key}:#{encoded_message}"
-        }
+      # Executes a GET request
+      def execute
+        req = Net::HTTP::Get.new(uri.path)
+        headers.each { |key, val| req[key] = val }
+        execute_ssl_request(uri.host, req)
       end
     end
   end
