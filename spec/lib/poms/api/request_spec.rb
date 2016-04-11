@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe 'Poms Api Requests' do
   let(:test_url) { 'https://rs.poms.omroep.nl/v1/api/media' }
