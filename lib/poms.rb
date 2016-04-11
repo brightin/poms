@@ -22,7 +22,7 @@ module Poms
   def fetch(arg)
     assert_credentials
     request = Api::Media.multiple(Array(arg), config)
-    Json.parse(request.execute.body)
+    JSON.parse(request.execute.body)
   end
 
   def descendants(mid, search_params)
