@@ -1,15 +1,11 @@
 ---
 UncommunicativeVariableName:
   exclude:
-  - Poms::Api::Auth#self.encode
-  - Poms::Api::Auth#self.params_string
-  - Poms::Api::Auth#self.params_string
   - Poms::Fields#available_until
   - Poms::Fields#odi_streams
   - Poms::MergedSeries#serie_mids
 DuplicateMethodCall:
   exclude:
-  - Poms::Api::RequestExecution#headers
   - Poms::Builderless::Clip#position
   - Poms::Builderless::Clip#video_url
   - Poms::Fields#available_until
@@ -18,7 +14,6 @@ DuplicateMethodCall:
   - Poms::Fields#odi_streams
 UtilityFunction:
   exclude:
-  - Poms::Api::RequestExecution#execute_ssl_request
   - Poms::Fields#available_until
   - Poms::Fields#image_id
   - Poms::Fields#images
