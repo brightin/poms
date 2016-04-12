@@ -7,21 +7,20 @@ module Poms
     class Authorization
       attr_reader :uri, :credentials
 
-      # Encodes the message according to POMS documentation
-      # @param secret The Poms API secret key
-      # @param message The message that needs to be hashed.
-      def self.encode(secret:, message:)
-        sha256_encoding = OpenSSL::Digest.new('sha256')
-        digest = OpenSSL::HMAC.digest(sha256_encoding, secret, message)
-        Base64.encode64(digest).strip
-      end
-
       # @param uri An instance of an Addressable::URI of the requested uri
       # @param credentials Provided through Poms.configure
       def initialize(uri:, credentials:)
         @uri = uri
         @credentials = credentials
       end
+
+      # Authorize a request by setting the headers
+      def authorize(request)
+        headers.each { |key, value| request[key] = value }
+        request
+      end
+
+      private
 
       def headers
         {
@@ -31,8 +30,6 @@ module Poms
           'Content-Type' => 'application/json'
         }
       end
-
-      private
 
       def datetime
         @datetime ||= Time.now.rfc822
@@ -47,9 +44,14 @@ module Poms
         ].compact.join(',')
       end
 
+      # Encodes the message according to POMS documentation
       def encoded_message
-        binding.pry
-        self.class.encode(secret: credentials.secret, message: message)
+        digest = OpenSSL::HMAC.digest(
+          OpenSSL::Digest.new('sha256'),
+          credentials.secret,
+          message
+        )
+        Base64.encode64(digest).strip
       end
 
       # The url params as a Ruby hash
