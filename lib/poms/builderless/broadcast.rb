@@ -1,5 +1,3 @@
-require 'poms/fields'
-
 module Poms
   module Builderless
     # A single broadcast (episode) fetched from Poms

@@ -1,6 +1,3 @@
-require 'poms/api/request'
-require 'poms/api/uris'
-
 module Poms
   module Api
     # Build Requests for the /media namespace in the Poms API
