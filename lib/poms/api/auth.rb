@@ -1,5 +1,3 @@
-require 'base64'
-
 module Poms
   module Api
     # This module can be used to create an authentication header for the Poms

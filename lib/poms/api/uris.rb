@@ -1,5 +1,3 @@
-require 'addressable/uri'
-
 # This module builds URI objects for various endpoints of the POMS API
 module Poms
   module Api
