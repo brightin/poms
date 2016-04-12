@@ -21,7 +21,8 @@ require 'poms/fields'
 # 2 -- Execute the request. Retry on failures (max 10?)
 # 3 -- Parse responded JSON. Extract fields if necessary
 module Poms
-  extend self
+  module_function
+
   attr_reader :config
 
   def configure
@@ -29,15 +30,24 @@ module Poms
     yield @config
   end
 
+  def credentials
+    @credentials ||= config.slice(:key, :secret, :origin)
+  end
+
   def fetch(arg)
+    # Deprecate this
+    multiple(arg)
+  end
+
+  def multiple(arg)
     assert_credentials
-    request = Api::Media.multiple(Array(arg), config)
+    request = Api::Media.multiple(Array(arg), credentials)
     JSON.parse(request.execute.body)
   end
 
   def descendants(mid, search_params)
     assert_credentials
-    request = Api::Media.descendants(mid, config, search_params)
+    request = Api::Media.descendants(mid, credentials, search_params)
     JSON.parse(request.execute.body)
   end
 
