@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'poms/builderless/broadcast'
 
 describe.skip Poms::Builderless::Broadcast do
   let(:subject) { Poms.fetch_current_broadcast('OPVO') }
