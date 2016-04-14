@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'poms/merged_series'
 
 describe.skip Poms::MergedSeries do
   let(:url) { described_class::TEST_URL }

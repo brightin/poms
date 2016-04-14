@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'poms/builderless/clip'
 
 describe.skip Poms::Builderless::Clip do
   let(:clip) { Poms.fetch('WO_NPO_1950962') }

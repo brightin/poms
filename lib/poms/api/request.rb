@@ -5,10 +5,6 @@
 # @param uri An instance of an Addressable::URI of the requested uri
 # @param credentials A struct containing the poms api key, secret and origin
 # @param body The data that is submitted in the post request body
-
-require 'poms/api/auth'
-require 'net/https'
-
 module Poms
   module Api
     # Contains authentication and request specific properties

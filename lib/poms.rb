@@ -1,8 +1,21 @@
 require 'active_support/all'
-require 'poms/api/media'
-require 'poms/api/search'
-require 'poms/errors/authentication_error'
+require 'addressable/uri'
+require 'base64'
 require 'json'
+require 'net/https'
+require 'timeout'
+
+require 'poms/api/auth'
+require 'poms/api/media'
+require 'poms/api/request'
+require 'poms/api/search'
+require 'poms/api/uris'
+require 'poms/builderless/broadcast'
+require 'poms/builderless/clip'
+require 'poms/errors/authentication_error'
+require 'poms/fields'
+require 'poms/merged_series'
+require 'poms/timestamp'
 
 # Main interface for the POMS gem
 #

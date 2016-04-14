@@ -1,4 +1,3 @@
-require 'poms/api/auth'
 require 'spec_helper'
 
 RSpec.describe Poms::Api::Auth do

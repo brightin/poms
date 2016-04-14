@@ -1,6 +1,3 @@
-require 'poms/api/request'
-require 'timeout'
-
 module Poms
   # Methods for working with the merged series api from NPO.
   module MergedSeries
