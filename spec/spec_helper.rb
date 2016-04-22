@@ -8,9 +8,9 @@ WebMock.disable_net_connect!
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  config.filter_sensitive_data("<POMS_ORIGIN>") { ENV["POMS_ORIGIN"] }
-  config.filter_sensitive_data("<POMS_KEY>") { ENV["POMS_KEY"] }
-  config.filter_sensitive_data("<POMS_SECRET>") { ENV["POMS_SECRET"] }
+  config.filter_sensitive_data('<POMS_ORIGIN>') { ENV['POMS_ORIGIN'] }
+  config.filter_sensitive_data('<POMS_KEY>') { ENV['POMS_KEY'] }
+  config.filter_sensitive_data('<POMS_SECRET>') { ENV['POMS_SECRET'] }
   config.hook_into :webmock
 end
 
