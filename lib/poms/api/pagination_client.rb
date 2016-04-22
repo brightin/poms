@@ -32,7 +32,6 @@ module Poms
         def initialize(uri, offset = 0)
           uri.query_values = { offset: offset }
           @uri = uri
-          @offset = offset
         end
 
         def next_page
@@ -53,7 +52,7 @@ module Poms
 
         private
 
-        attr_reader :response, :offset, :uri
+        attr_reader :response, :uri
 
         def next_index
           response['offset'] + response['max']
