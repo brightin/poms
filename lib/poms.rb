@@ -82,7 +82,7 @@ module Poms
   # Fetches a single current broadcast for the provided channel
   #
   # @param channel The channel name
-  def fetch_current_broadcast(channel)
+  def currently_scheduled_event(channel)
     Poms::Api::JsonClient.get(
       Poms::Api::Uris::Schedule.channel(config.base_uri, channel),
       config.credentials

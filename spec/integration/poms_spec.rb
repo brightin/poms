@@ -95,7 +95,7 @@ RSpec.describe Poms do
     end
   end
 
-  describe '.fetch_current_broadcast' do
+  describe '.currently_scheduled_event' do
     before do
       Timecop.freeze(Time.new(2016, 5, 2, 16, 0, 0, '+02:00'))
     end
@@ -104,7 +104,7 @@ RSpec.describe Poms do
       Timecop.return
     end
 
-    subject { described_class.fetch_current_broadcast('OPVO') }
+    subject { described_class.currently_scheduled_event('OPVO') }
 
     it 'only returns a result for the current channel' do
       expect(subject['channel']).to eq('OPVO')
