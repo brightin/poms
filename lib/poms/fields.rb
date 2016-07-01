@@ -43,6 +43,11 @@ module Poms
       item['_rev'].to_i
     end
 
+    # Returns the revision from a Poms hash.
+    def last_modified(item)
+      item.fetch('lastModified', nil)
+    end
+
     # Returns an array of odi stream types.
     # Note: this code is copied from Broadcast and it is assumed it was working
     # there.

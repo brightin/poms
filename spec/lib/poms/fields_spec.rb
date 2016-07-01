@@ -80,6 +80,17 @@ naar hun loods, maar is dat wel een goed idee?")
       end
     end
 
+    describe '.last_modified' do
+      it 'returns the last modified date' do
+        expect(described_class.last_modified(poms_data))
+          .to eq(1_385_580_426_095)
+      end
+
+      it 'returns nil if it cannot be found' do
+        expect(described_class.last_modified({})).to be_nil
+      end
+    end
+
     describe '.odi_streams' do
       it 'returns an array of stream types' do
         expect(described_class.odi_streams(poms_data)).to match_array(

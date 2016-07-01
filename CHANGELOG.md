@@ -1,5 +1,9 @@
 # Poms Release notes
 
+## 2.2.0
+
+* Add `last_modified` function to `Poms::Fields`.
+
 ## 2.1.1
 
 * Add `addressable` to gemspec.
