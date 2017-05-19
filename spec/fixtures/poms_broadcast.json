@@ -1,331 +1,344 @@
 {
-    "_id": "KRO_1614405",
-    "_rev": "60-77ca9ba680a9bf9f5215137163eb3a14",
-    "avAttributes": {
-        "audioAttributes": {
-            "numberOfChannels": 2
-        },
-        "videoAttributes": {
-            "aspectRatio": "16:9",
-            "color": "BLACK_AND_WHITE_AND_COLOR"
-        }
+  "objectType": "program",
+  "mid": "KRO_1614405",
+  "type": "BROADCAST",
+  "avType": "VIDEO",
+  "workflow": "PUBLISHED",
+  "sortDate": 1369757335000,
+  "creationDate": 1367962602891,
+  "lastModified": 1493122309620,
+  "urn": "urn:vpro:media:program:25215266",
+  "embeddable": true,
+  "episodeOf": [
+    {
+      "midRef": "KRO_1521173",
+      "urnRef": "urn:vpro:media:group:15084154",
+      "type": "SEASON",
+      "index": 64,
+      "highlighted": false,
+      "added": 1369773120772
+    }
+  ],
+  "crids": [
+    "crid://tmp.program.omroep.nl/15641304"
+  ],
+  "broadcasters": [
+    {
+      "id": "KRO",
+      "value": "KRO"
     },
-    "avType": "VIDEO",
-    "broadcasters": [
-        "KRO",
-        "Zapp"
-    ],
-    "creationDate": 1367962602891,
-    "credits": [],
-    "crids": [
-        "crid://tmp.program.omroep.nl/15641304"
-    ],
-    "descendantOf": [
-        {
-            "midRef": "KRO_1521173",
-            "type": "SEASON",
-            "urnRef": "urn:vpro:media:group:15084154"
-        },
-        {
-            "midRef": "POMS_S_KRO_059857",
-            "type": "SERIES",
-            "urnRef": "urn:vpro:media:group:5346131"
+    {
+      "id": "ZAPP",
+      "value": "NPO Zapp"
+    }
+  ],
+  "titles": [
+    {
+      "value": "VRijland",
+      "owner": "BROADCASTER",
+      "type": "MAIN"
+    },
+    {
+      "value": "VRijland",
+      "owner": "NEBO",
+      "type": "MAIN"
+    },
+    {
+      "value": "VRijland",
+      "owner": "MIS",
+      "type": "MAIN"
+    },
+    {
+      "value": "VRijland",
+      "owner": "CERES",
+      "type": "MAIN"
+    },
+    {
+      "value": "VRijland",
+      "owner": "WHATS_ON",
+      "type": "MAIN"
+    },
+    {
+      "value": "VRijland afl.64 & 65 (herhaling)",
+      "owner": "BROADCASTER",
+      "type": "SUB"
+    },
+    {
+      "value": "VRijland afl.64 & 65 (herhaling)",
+      "owner": "CERES",
+      "type": "SUB"
+    }
+  ],
+  "descriptions": [
+    {
+      "value": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?",
+      "owner": "BROADCASTER",
+      "type": "MAIN"
+    },
+    {
+      "value": "Dramaserie voor de jeugd over liefde, kattenkwaad en avontuur.",
+      "owner": "MIS",
+      "type": "MAIN"
+    },
+    {
+      "value": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?",
+      "owner": "CERES",
+      "type": "MAIN"
+    },
+    {
+      "value": "Dramaserie voor de jeugd over liefde, kattenkwaad en avontuur.",
+      "owner": "WHATS_ON",
+      "type": "MAIN"
+    },
+    {
+      "value": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?",
+      "owner": "CERES",
+      "type": "SHORT"
+    }
+  ],
+  "genres": [],
+  "countries": [],
+  "languages": [],
+  "avAttributes": {
+    "videoAttributes": {
+      "color": "BLACK_AND_WHITE_AND_COLOR",
+      "aspectRatio": "16:9"
+    },
+    "audioAttributes": {
+      "numberOfChannels": 2
+    }
+  },
+  "duration": 1080000,
+  "descendantOf": [
+    {
+      "midRef": "KRO_1521173",
+      "urnRef": "urn:vpro:media:group:15084154",
+      "type": "SEASON"
+    },
+    {
+      "midRef": "POMS_S_KRO_059857",
+      "urnRef": "urn:vpro:media:group:5346131",
+      "type": "SERIES"
+    }
+  ],
+  "predictions": [
+    {
+      "state": "REALIZED",
+      "publishStart": 1434172368000,
+      "publishStop": 1435381968000,
+      "platform": "INTERNETVOD"
+    }
+  ],
+  "locations": [
+    {
+      "programUrl": "odip+http://odi.omroep.nl/video/adaptive/KRO_1614405",
+      "avAttributes": {
+        "avFileFormat": "HASP"
+      },
+      "owner": "CERES",
+      "creationDate": 1369760183309,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369760183436,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079425"
+    },
+    {
+      "programUrl": "npo://internetvod.omroep.nl/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 3500000,
+        "avFileFormat": "HASP"
+      },
+      "owner": "AUTHORITY",
+      "creationDate": 1493122309537,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1493122309612,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:92956589"
+    },
+    {
+      "programUrl": "odi+http://odi.omroep.nl/video/h264_sb/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 204800,
+        "avFileFormat": "MP4",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
         }
-    ],
-    "descriptions": [
-        {
-            "owner": "BROADCASTER",
-            "type": "MAIN",
-            "value": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?"
-        },
-        {
-            "owner": "MIS",
-            "type": "MAIN",
-            "value": "Dramaserie voor de jeugd over liefde, kattenkwaad en avontuur."
-        },
-        {
-            "owner": "CERES",
-            "type": "MAIN",
-            "value": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?\n\t&nbsp;"
-        },
-        {
-            "owner": "WHATS_ON",
-            "type": "MAIN",
-            "value": "Dramaserie voor de jeugd over liefde, kattenkwaad en avontuur."
-        },
-        {
-            "owner": "CERES",
-            "type": "SHORT",
-            "value": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?\n\t&nbsp;"
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721479,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721611,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079907"
+    },
+    {
+      "programUrl": "odi+http://odi.omroep.nl/video/h264_bb/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 512000,
+        "avFileFormat": "MP4",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
         }
-    ],
-    "duration": 1080000,
-    "embeddable": true,
-    "episodeOf": [
-        {
-            "added": 1369773120772,
-            "highlighted": false,
-            "index": 64,
-            "midRef": "KRO_1521173",
-            "type": "SEASON",
-            "urnRef": "urn:vpro:media:group:15084154"
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721480,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721613,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079910"
+    },
+    {
+      "programUrl": "odi+http://odi.omroep.nl/video/h264_std/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 1024000,
+        "avFileFormat": "MP4",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
         }
-    ],
-    "images": [
-        {
-            "creationDate": 1369760424862,
-            "description": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?\n\t&nbsp;",
-            "highlighted": false,
-            "imageUri": "urn:vpro:image:187003",
-            "lastModified": 1369760431467,
-            "owner": "NEBO",
-            "title": "VRijland",
-            "type": "STILL",
-            "urn": "urn:vpro:media:image:26079440",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "creationDate": 1369760428232,
-            "description": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?\n\t&nbsp;",
-            "highlighted": false,
-            "imageUri": "urn:vpro:image:187004",
-            "lastModified": 1369760431467,
-            "owner": "NEBO",
-            "title": "VRijland",
-            "type": "STILL",
-            "urn": "urn:vpro:media:image:26079441",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "creationDate": 1368815299665,
-            "description": "VRijland",
-            "highlighted": false,
-            "imageUri": "urn:vpro:image:184169",
-            "lastModified": 1368815299705,
-            "owner": "BROADCASTER",
-            "title": "VRijland",
-            "type": "PICTURE",
-            "urn": "urn:vpro:media:image:25765753",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "creationDate": 1369760431388,
-            "description": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?\n\t&nbsp;",
-            "highlighted": false,
-            "imageUri": "urn:vpro:image:187005",
-            "lastModified": 1369760431468,
-            "owner": "NEBO",
-            "title": "VRijland",
-            "type": "PROMO_LANDSCAPE",
-            "urn": "urn:vpro:media:image:26079442",
-            "workflow": "PUBLISHED"
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721480,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721614,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079913"
+    },
+    {
+      "programUrl": "odi+http://odi.omroep.nl/video/wvc1_std/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 1024000,
+        "avFileFormat": "WVC1",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
         }
-    ],
-    "lastModified": 1369859493926,
-    "locations": [
-        {
-            "avAttributes": {
-                "avFileFormat": "HASP"
-            },
-            "creationDate": 1369760183309,
-            "lastModified": 1369760183436,
-            "owner": "CERES",
-            "programUrl": "odip+http://odi.omroep.nl/video/adaptive/KRO_1614405",
-            "type": "INTERNAL",
-            "publishStop": 1369758599000,
-            "urn": "urn:vpro:media:location:26079425",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "avAttributes": {
-                "avFileFormat": "MP4",
-                "bitrate": 204800,
-                "videoAttributes": {
-                    "aspectRatio": "16:9",
-                    "videoCoding": "WM"
-                }
-            },
-            "creationDate": 1369765721479,
-            "lastModified": 1369765721611,
-            "owner": "NEBO",
-            "programUrl": "odi+http://odi.omroep.nl/video/h264_sb/KRO_1614405",
-            "publishStart": 1369758589000,
-            "type": "EXTERNAL",
-            "urn": "urn:vpro:media:location:26079907",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "avAttributes": {
-                "avFileFormat": "MP4",
-                "bitrate": 512000,
-                "videoAttributes": {
-                    "aspectRatio": "16:9",
-                    "videoCoding": "WM"
-                }
-            },
-            "creationDate": 1369765721480,
-            "lastModified": 1369765721613,
-            "owner": "NEBO",
-            "programUrl": "odi+http://odi.omroep.nl/video/h264_bb/KRO_1614405",
-            "publishStart": 1369758589000,
-            "type": "EXTERNAL",
-            "urn": "urn:vpro:media:location:26079910",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "avAttributes": {
-                "avFileFormat": "MP4",
-                "bitrate": 1024000,
-                "videoAttributes": {
-                    "aspectRatio": "16:9",
-                    "videoCoding": "WM"
-                }
-            },
-            "creationDate": 1369765721480,
-            "lastModified": 1369765721614,
-            "owner": "NEBO",
-            "programUrl": "odi+http://odi.omroep.nl/video/h264_std/KRO_1614405",
-            "publishStart": 1369758589000,
-            "type": "EXTERNAL",
-            "urn": "urn:vpro:media:location:26079913",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "avAttributes": {
-                "avFileFormat": "WVC1",
-                "bitrate": 1024000,
-                "videoAttributes": {
-                    "aspectRatio": "16:9",
-                    "videoCoding": "WM"
-                }
-            },
-            "creationDate": 1369765721480,
-            "lastModified": 1369765721615,
-            "owner": "NEBO",
-            "programUrl": "odi+http://odi.omroep.nl/video/wvc1_std/KRO_1614405",
-            "publishStart": 1369758589000,
-            "type": "EXTERNAL",
-            "urn": "urn:vpro:media:location:26079916",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "avAttributes": {
-                "avFileFormat": "WM",
-                "bitrate": 204800,
-                "videoAttributes": {
-                    "aspectRatio": "16:9",
-                    "videoCoding": "WM"
-                }
-            },
-            "creationDate": 1369765721479,
-            "lastModified": 1369765721617,
-            "owner": "NEBO",
-            "programUrl": "odi+http://odi.omroep.nl/video/wmv_sb/KRO_1614405",
-            "publishStart": 1369758589000,
-            "type": "EXTERNAL",
-            "urn": "urn:vpro:media:location:26079919",
-            "workflow": "PUBLISHED"
-        },
-        {
-            "avAttributes": {
-                "avFileFormat": "WM",
-                "bitrate": 512000,
-                "videoAttributes": {
-                    "aspectRatio": "16:9",
-                    "videoCoding": "WM"
-                }
-            },
-            "creationDate": 1369765721479,
-            "lastModified": 1369765721618,
-            "owner": "NEBO",
-            "programUrl": "odi+http://odi.omroep.nl/video/wmv_bb/KRO_1614405",
-            "publishStart": 1369758589000,
-            "type": "EXTERNAL",
-            "urn": "urn:vpro:media:location:26079922",
-            "workflow": "PUBLISHED"
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721480,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721615,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079916"
+    },
+    {
+      "programUrl": "odi+http://odi.omroep.nl/video/wmv_sb/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 204800,
+        "avFileFormat": "WM",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
         }
-    ],
-    "mid": "KRO_1614405",
-    "poProgID": "KRO_1614405",
-    "poSeriesID": "KRO_1521173",
-    "predictions": [
-        {
-            "state": "REALIZED",
-            "publishStart": 1434172368000,
-            "publishStop": 1435381968000,
-            "platform": "INTERNETVOD"
-        },
-        {
-            "state": "REALIZED",
-            "publishStart": 1434172368000,
-            "publishStop": 1435381968000,
-            "platform": "TVVOD"
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721479,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721617,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079919"
+    },
+    {
+      "programUrl": "odi+http://odi.omroep.nl/video/wmv_bb/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 512000,
+        "avFileFormat": "WM",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
         }
-    ],
-    "scheduleEvents": [
-        {
-            "channel": "NED3",
-            "duration": 1049000,
-            "midRef": "KRO_1614405",
-            "poProgID": "KRO_1614405",
-            "poSeriesID": "KRO_1521173",
-            "start": 1369757335000,
-            "urnRef": "urn:vpro:media:program:25215266"
-        },
-        {
-            "repeat": {
-                "isRerun": true
-            },
-            "textSubtitles": "Teletekst ondertitels",
-            "guideDay": 1464732000000,
-            "start": 1464792900000,
-            "duration": 1269000,
-            "poProgID": "KRO_1614405",
-            "channel": "BVNT",
-            "urnRef": "urn:vpro:media:program:47289723",
-            "midRef": "KRO_1614405"
-        }
-    ],
-    "segments": [],
-    "sortDate": 1369757335000,
-    "titles": [
-        {
-            "owner": "BROADCASTER",
-            "type": "MAIN",
-            "value": "VRijland"
-        },
-        {
-            "owner": "NEBO",
-            "type": "MAIN",
-            "value": "VRijland"
-        },
-        {
-            "owner": "MIS",
-            "type": "MAIN",
-            "value": "VRijland"
-        },
-        {
-            "owner": "CERES",
-            "type": "MAIN",
-            "value": "VRijland"
-        },
-        {
-            "owner": "WHATS_ON",
-            "type": "MAIN",
-            "value": "VRijland"
-        },
-        {
-            "owner": "BROADCASTER",
-            "type": "SUB",
-            "value": "VRijland afl.64 & 65 (herhaling)"
-        },
-        {
-            "owner": "CERES",
-            "type": "EPISODE",
-            "value": "VRijland afl.64 & 65 (herhaling)"
-        }
-    ],
-    "type": "BROADCAST",
-    "urn": "urn:vpro:media:program:25215266",
-    "workflow": "PUBLISHED"
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721479,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721618,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079922"
+    }
+  ],
+  "scheduleEvents": [
+      {
+          "channel": "NED3",
+          "duration": 1049000,
+          "midRef": "KRO_1614405",
+          "poProgID": "KRO_1614405",
+          "poSeriesID": "KRO_1521173",
+          "start": 1369757335000,
+          "urnRef": "urn:vpro:media:program:25215266"
+      },
+      {
+          "repeat": {
+              "isRerun": true
+          },
+          "textSubtitles": "Teletekst ondertitels",
+          "guideDay": 1464732000000,
+          "start": 1464792900000,
+          "duration": 1269000,
+          "poProgID": "KRO_1614405",
+          "channel": "BVNT",
+          "urnRef": "urn:vpro:media:program:47289723",
+          "midRef": "KRO_1614405"
+      }
+  ],
+  "images": [
+    {
+      "title": "VRijland",
+      "description": "VRijland",
+      "imageUri": "urn:vpro:image:184169",
+      "owner": "BROADCASTER",
+      "type": "PICTURE",
+      "highlighted": false,
+      "creationDate": 1368815299665,
+      "workflow": "PUBLISHED",
+      "lastModified": 1368815299705,
+      "urn": "urn:vpro:media:image:25765753"
+    },
+    {
+      "title": "VRijland",
+      "description": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?",
+      "imageUri": "urn:vpro:image:187003",
+      "owner": "NEBO",
+      "type": "STILL",
+      "highlighted": false,
+      "creationDate": 1369760424862,
+      "workflow": "PUBLISHED",
+      "lastModified": 1389747645329,
+      "urn": "urn:vpro:media:image:26079440"
+    },
+    {
+      "title": "VRijland",
+      "description": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?",
+      "imageUri": "urn:vpro:image:187004",
+      "owner": "NEBO",
+      "type": "STILL",
+      "highlighted": false,
+      "creationDate": 1369760428232,
+      "workflow": "PUBLISHED",
+      "lastModified": 1389747645329,
+      "urn": "urn:vpro:media:image:26079441"
+    },
+    {
+      "title": "VRijland",
+      "description": "Li biedt Barry een baantje aan bij de uitdragerij en vraagt zich meteen af of dat wel zo slim was. Timon en Joep zien de criminele organisatie de Rijland Angels. Timon wil naar hun loods, maar is dat wel een goed idee?",
+      "imageUri": "urn:vpro:image:187005",
+      "owner": "NEBO",
+      "type": "STILL",
+      "highlighted": false,
+      "creationDate": 1369760431388,
+      "workflow": "PUBLISHED",
+      "lastModified": 1389747645329,
+      "urn": "urn:vpro:media:image:26079442"
+    }
+  ],
+  "publishDate": 1493122614044
 }
