@@ -158,6 +158,13 @@ naar hun loods, maar is dat wel een goed idee?")
       end
     end
 
+    describe '.broadcasters' do
+      it 'returns the provided broadcasters as an Array' do
+        expect(described_class.broadcasters(poms_data))
+          .to eql(['KRO', 'NPO Zapp'])
+      end
+    end
+
     describe '.age_rating' do
       it 'returns the age rating' do
         expect(described_class.age_rating('ageRating' => '6')).to eql('6')
