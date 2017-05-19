@@ -50,7 +50,7 @@ naar hun loods, maar is dat wel een goed idee?")
 
       it 'orders the items by type' do
         types = described_class.images(poms_data).map { |i| i['type'] }
-        expect(types).to eq(%w(PROMO_LANDSCAPE PICTURE STILL STILL))
+        expect(types).to eq(%w(PICTURE STILL STILL STILL))
       end
     end
 
@@ -73,7 +73,7 @@ naar hun loods, maar is dat wel een goed idee?")
     describe '.image_id' do
       it 'returns the id of the image' do
         expect(described_class.image_id(poms_data['images'].first))
-          .to eq('187003')
+          .to eq('184169')
       end
 
       it 'returns nil if there is no image' do
@@ -83,7 +83,7 @@ naar hun loods, maar is dat wel een goed idee?")
 
     describe '.first_image_id' do
       it 'returns the id of the first image' do
-        expect(described_class.first_image_id(poms_data)).to eq('187005')
+        expect(described_class.first_image_id(poms_data)).to eq('184169')
       end
 
       it 'returns nil if there is no image' do
@@ -155,6 +155,13 @@ naar hun loods, maar is dat wel een goed idee?")
         it 'returns nil if no matching parent found' do
           expect(described_class.position(clip, member_of: 'nobody')).to be_nil
         end
+      end
+    end
+
+    describe '.broadcasters' do
+      it 'returns the provided broadcasters as an Array' do
+        expect(described_class.broadcasters(poms_data))
+          .to eql(['KRO', 'NPO Zapp'])
       end
     end
 
