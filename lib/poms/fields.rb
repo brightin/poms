@@ -18,6 +18,10 @@ module Poms
       value_of_type(item, 'descriptions', type)
     end
 
+    def broadcasters(item)
+      item['broadcasters'].map { |key_value_pair| key_value_pair['value'] }
+    end
+
     # Returns the images from the hash
     def images(item)
       item['images'].try(:sort_by) do |i|
