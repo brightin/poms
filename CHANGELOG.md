@@ -1,5 +1,9 @@
 # Poms Release notes
 
+## 2.2.1
+
+* Add `Poms::Fields.broadcasts` which returns the associated broadcasters in an Array
+
 ## 2.2.0
 
 * Remove `Poms::Fields#rev` as it wasn't provided by the Poms data anyway.
