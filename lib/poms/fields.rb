@@ -19,7 +19,9 @@ module Poms
     end
 
     def broadcasters(item)
-      item['broadcasters'].map { |key_value_pair| key_value_pair['value'] }
+      Array(item['broadcasters']).map do |key_value_pair|
+        key_value_pair['value']
+      end
     end
 
     # Returns the images from the hash
