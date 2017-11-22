@@ -73,7 +73,7 @@ RSpec.describe Poms do
     end
 
     it 'finds the right members' do
-      expect(subject.first['mid']).to eq('WO_NTR_3665130')
+      expect(subject.first['result']['mid']).to eq('WO_NTR_3952896')
     end
   end
 

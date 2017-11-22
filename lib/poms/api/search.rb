@@ -11,6 +11,11 @@ module Poms
 
       module_function
 
+      # Helper function for returning and empty body.
+      def empty
+        {}
+      end
+
       def build(options)
         return {} if options.empty?
         all = options.map do |key, value|

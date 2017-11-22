@@ -64,7 +64,9 @@ module Poms
 
   def members(mid)
     Api::PaginationClient.execute(build_request(
-      uri: Api::Uris::Media.members(config.base_uri, mid)
+      method: :post,
+      uri: Api::Uris::Media.members(config.base_uri, mid),
+      body: Api::Search.empty
     ))
   end
 
