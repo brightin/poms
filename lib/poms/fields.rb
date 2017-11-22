@@ -6,7 +6,7 @@ module Poms
   module Fields
     module_function
 
-    IMAGE_TYPE_PRIORITY = %w(PROMO_LANDSCAPE PICTURE).freeze
+    IMAGE_TYPE_PRIORITY = %w[PROMO_LANDSCAPE PICTURE].freeze
 
     # Returns the title, main by default
     def title(item, type = 'MAIN')

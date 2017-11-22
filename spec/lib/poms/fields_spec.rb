@@ -50,7 +50,7 @@ naar hun loods, maar is dat wel een goed idee?")
 
       it 'orders the items by type' do
         types = described_class.images(poms_data).map { |i| i['type'] }
-        expect(types).to eq(%w(PICTURE STILL STILL STILL))
+        expect(types).to eq(%w[PICTURE STILL STILL STILL])
       end
     end
 
@@ -104,7 +104,7 @@ naar hun loods, maar is dat wel een goed idee?")
     describe '.odi_streams' do
       it 'returns an array of stream types' do
         expect(described_class.odi_streams(poms_data)).to match_array(
-          %w(adaptive h264_sb h264_bb h264_std wvc1_std wmv_sb wmv_bb)
+          %w[adaptive h264_sb h264_bb h264_std wvc1_std wmv_sb wmv_bb]
         )
       end
 
@@ -146,7 +146,7 @@ naar hun loods, maar is dat wel een goed idee?")
         end
       end
 
-      context 'When given an ancestor midRef' do
+      context 'when given an ancestor midRef' do
         it "returns the clip's index in that parent" do
           pos = described_class.position(clip, member_of: 'POMS_S_ZAPP_4110813')
           expect(pos).to be(1)
@@ -178,9 +178,9 @@ naar hun loods, maar is dat wel een goed idee?")
 
     describe '.content_ratings' do
       it 'returns an array with the content ratings' do
-        poms_data = { 'contentRatings' => %w(ANGST GEWELD) }
+        poms_data = { 'contentRatings' => %w[ANGST GEWELD] }
         expect(described_class.content_ratings(poms_data))
-          .to eql(%w(ANGST GEWELD))
+          .to eql(%w[ANGST GEWELD])
       end
 
       it 'returns an empty array if no content rating is present' do

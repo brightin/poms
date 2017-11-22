@@ -36,7 +36,7 @@ RSpec.describe Poms do
     it 'returns nil if not found' do
       expect {
         described_class.first!('ABCD')
-      }.to raise_error { Poms::Errors::HttpMissingError }
+      }.to(raise_error { Poms::Errors::HttpMissingError })
     end
   end
 

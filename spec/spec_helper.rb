@@ -19,7 +19,7 @@ VCR.configure do |config|
 end
 
 RSpec.configure do |config|
-  config.around(:each) do |example|
+  config.around do |example|
     options = example.metadata[:vcr] || {}
     if options[:record] == :skip
       VCR.turned_off(&example)

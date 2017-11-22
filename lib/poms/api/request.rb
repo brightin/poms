@@ -45,9 +45,8 @@ module Poms
       private
 
       def validate!
-        unless %i(get post).include?(@method)
-          raise ArgumentError, 'method should be :get or :post'
-        end
+        raise ArgumentError, 'method should be :get or :post' unless
+          %i[get post].include?(@method)
       end
     end
   end

@@ -12,7 +12,7 @@ module Poms
 
     # List of special credential keys that need to be present in order to be
     # able to use the API.
-    REQUIRED_CREDENTIAL_KEYS = [:key, :origin, :secret].freeze
+    REQUIRED_CREDENTIAL_KEYS = %i[key origin secret].freeze
 
     # Build a new configuration object, including validations and freezing.
     #
