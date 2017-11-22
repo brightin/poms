@@ -1,4 +1,4 @@
 # The version
 module Poms
-  VERSION = '2.2.1'.freeze
+  VERSION = '2.3.0'.freeze
 end
