@@ -12,5 +12,5 @@ Poms.first('POMS_S_NTR_2342303')
 # => A hash representing the data corresponding to the given MID
 
 # Fetch multiple entities
-Poms.fetch(%w(WO_TELEAC_003061 POMS_EO_622912))
+Poms.fetch(%w[WO_TELEAC_003061 POMS_EO_622912])
 # => An array of hashes representing data corresponding to those MIDs

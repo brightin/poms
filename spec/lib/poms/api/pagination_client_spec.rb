@@ -18,7 +18,7 @@ module Poms
       end
 
       it 'returns all members of post in one Array' do
-        search_params = { starts_at: DateTime.new(2014, 12, 1) }
+        search_params = { starts_at: Time.new(2014, 12, 1) }
         result = described_class.execute(Request.new(
           method: :post,
           uri: Api::Uris::Media.members(config.base_uri, 'POMS_S_NTR_2448585'),

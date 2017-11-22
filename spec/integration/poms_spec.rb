@@ -36,7 +36,7 @@ RSpec.describe Poms do
     it 'returns nil if not found' do
       expect {
         described_class.first!('ABCD')
-      }.to raise_error { Poms::Errors::HttpMissingError }
+      }.to(raise_error { Poms::Errors::HttpMissingError })
     end
   end
 
@@ -73,7 +73,7 @@ RSpec.describe Poms do
     end
 
     it 'finds the right members' do
-      expect(subject.first['mid']).to eq('WO_NTR_3665130')
+      expect(subject.first['result']['mid']).to eq('WO_NTR_3952896')
     end
   end
 
