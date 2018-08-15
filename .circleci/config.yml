@@ -7,6 +7,7 @@ jobs:
           POMS_KEY: key
           POMS_ORIGIN: origin
           POMS_SECRET: secret
+          TZ: "/usr/share/zoneinfo/Europe/Amsterdam"
     steps:
       - checkout
       - run: bundle install
