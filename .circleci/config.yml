@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.3.4-node-browsers
+        environment:
+          POMS_KEY: key
+          POMS_ORIGIN: origin
+          POMS_SECRET: secret
+          TZ: "/usr/share/zoneinfo/Europe/Amsterdam"
+    steps:
+      - checkout
+      - run: bundle install
+      - run: bundle exec rubocop
+      - run: bundle exec rspec
