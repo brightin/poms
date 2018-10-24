@@ -25,6 +25,18 @@ module Poms
       end
     end
 
+    describe '.descendants_of' do
+      it 'returns all descendantOfs with type SERIES' do
+        expect(described_class.descendants_of(poms_data, 'SERIES')).to eq(
+          [{
+            'midRef' => 'POMS_S_KRO_059857',
+            'type' => 'SERIES',
+            'urnRef' => 'urn:vpro:media:group:5346131'
+          }]
+        )
+      end
+    end
+
     describe '.description' do
       it 'returns the first MAIN description' do
         expect(described_class.description(poms_data)).to eq("Li biedt Barry \

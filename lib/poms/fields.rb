@@ -18,6 +18,13 @@ module Poms
       value_of_type(item, 'descriptions', type)
     end
 
+    # Returns all the descendantOfs of the type given.
+    # @param item The Poms Hash
+    # @param type The type of descendantOfs we want
+    def descendants_of(item, type)
+      item['descendantOf'].select { |descendant| descendant['type'] == type }
+    end
+
     def broadcasters(item)
       Array(item['broadcasters']).map do |key_value_pair|
         key_value_pair['value']
