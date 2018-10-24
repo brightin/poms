@@ -26,14 +26,14 @@ module Poms
     end
 
     describe '.descendant_of' do
-      it 'returns a descendantOf with type SERIES' do
-        expect(described_class.descendant_of(poms_data, type: 'SERIES')).to eq(
-          {"midRef"=>"POMS_S_KRO_059857", "type"=>"SERIES", "urnRef"=>"urn:vpro:media:group:5346131"}
+      it 'returns all descendantOfs with type SERIES' do
+        expect(described_class.descendants_of(poms_data, 'SERIES')).to eq(
+          [{
+            'midRef' => 'POMS_S_KRO_059857',
+            'type' => 'SERIES',
+            'urnRef' => 'urn:vpro:media:group:5346131'
+          }]
         )
-      end
-
-      it 'returns an array of descendantOfs if no type is specified' do
-        expect(described_class.descendant_of(poms_data).count).to eq(2)
       end
     end
 
