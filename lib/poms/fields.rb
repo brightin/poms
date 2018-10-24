@@ -26,7 +26,7 @@ module Poms
       if type
         item['descendantOf'].find { |descendant| descendant['type'] == type }
       else
-        Array(item['descendantOf'])
+        item['descendantOf']
       end
     end
 
