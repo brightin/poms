@@ -20,7 +20,7 @@ module Poms
 
     # Returns all the descendantOfs of the type given.
     # @param item The Poms Hash
-    # @param optional :type The type of descendantOfs we want
+    # @param type The type of descendantOfs we want
     def descendants_of(item, type)
       item['descendantOf'].select { |descendant| descendant['type'] == type }
     end
