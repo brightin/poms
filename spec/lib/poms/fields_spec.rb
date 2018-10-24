@@ -25,7 +25,7 @@ module Poms
       end
     end
 
-    describe '.descendant_of' do
+    describe '.descendants_of' do
       it 'returns all descendantOfs with type SERIES' do
         expect(described_class.descendants_of(poms_data, 'SERIES')).to eq(
           [{
