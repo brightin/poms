@@ -2,7 +2,7 @@
 
 ## 2.3.1
 
-* Add `Poms::Fields.descendant_of` which returns all descendantOf's or one with a specific type if given.
+* Add `Poms::Fields.descendants_of` which returns all descendantOf's or one with a specific type if given.
 
 ## 2.2.1
 
