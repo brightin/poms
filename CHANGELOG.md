@@ -4,6 +4,10 @@
 
 * Add `Poms::Fields.descendants_of` which returns all descendantOf's of specific type.
 
+## 2.3.0
+
+* Make `members` run as a POST request.
+
 ## 2.2.1
 
 * Add `Poms::Fields.broadcasts` which returns the associated broadcasters in an Array

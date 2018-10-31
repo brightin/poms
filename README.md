@@ -84,3 +84,7 @@ Gem | API
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Releasing
+
+Make sure to use [Semantic Versioning](https://semver.org/) when bumping the version. To release tag the master branch with the version and then push to rubygems. `rake release` does this for you.
