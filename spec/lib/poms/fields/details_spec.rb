@@ -66,7 +66,6 @@ naar hun loods, maar is dat wel een goed idee?")
         end
       end
 
-
       describe '.position' do
         let(:clip) { JSON.parse(File.read('spec/fixtures/poms_clip.json')) }
 

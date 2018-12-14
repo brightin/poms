@@ -3,8 +3,9 @@ module Poms
   module Fields
     # Module to find details from for ex. attributes on poms items.
     module Details
-      # robocop:disable Style/ModuleFunction
+      # rubocop:disable Style/ModuleFunction
       extend self
+      # rubocop:enable Style/ModuleFunction
 
       # Returns the title, main by default
       def title(item, type = 'MAIN')
