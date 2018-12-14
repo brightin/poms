@@ -5,9 +5,7 @@ module Poms
     # modeule to retrieve scheduling/timtable related information from
     # poms items.
     module Schedule
-      # rubocop:disable Style/ModuleFunction
       extend self
-      # rubocop:enable Style/ModuleFunction
 
       # Returns an array of odi stream types.
       # Note: this code is copied from Broadcast

@@ -2,9 +2,7 @@ module Poms
   module Fields
     # Module to retrieve media related information from poms items.
     module Media
-      # rubocop:disable Style/ModuleFunction
       extend self
-      # rubocop:enable Style/ModuleFunction
 
       IMAGE_TYPE_PRIORITY = %w[PROMO_LANDSCAPE PICTURE].freeze
 

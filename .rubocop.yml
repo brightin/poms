@@ -30,6 +30,9 @@ Style/AndOr:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/ModuleFunction:
+  Enabled: false
+
 ModuleLength:
   Exclude:
     - spec/**/*_spec.rb # specs are only in module for easier access to functions
