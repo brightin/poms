@@ -89,7 +89,6 @@ module Poms
           )
         end
       end
-
     end
   end
 end
