@@ -72,6 +72,25 @@ module Poms
       streams.uniq
     end
 
+    def publication(poms_item)
+      return if poms_item['locations'].blank?
+      poms_item['locations'].find do |item|
+        item['platform'] == 'INTERNETVOD' && item['workflow'] == 'PUBLISHED'
+      end
+    end
+
+    def publish_stop(poms_item)
+      published_item = publication(poms_item)
+      return unless published_item
+      Timestamp.to_datetime(published_item['publishStop'])
+    end
+
+    def publish_start(poms_item)
+      published_item = publication(poms_item)
+      return unless published_item
+      Timestamp.to_datetime(published_item['publishStart'])
+    end
+
     # Returns the enddate of the publication of an internet vod if present.
     def available_until(item)
       return if item['predictions'].blank?
