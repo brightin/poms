@@ -3,7 +3,7 @@ module Poms
   module Fields
     module Details
 
-      module_function
+      extend self
 
       # Returns the title, main by default
       def title(item, type = 'MAIN')

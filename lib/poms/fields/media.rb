@@ -2,7 +2,7 @@ module Poms
   module Fields
     module Media
 
-      module_function
+      extend self
 
       IMAGE_TYPE_PRIORITY = %w[PROMO_LANDSCAPE PICTURE].freeze
 

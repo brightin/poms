@@ -4,7 +4,7 @@ module Poms
   module Fields
     module Schedule
 
-      module_function
+      extend self
 
       # Returns an array of odi stream types.
       # Note: this code is copied from Broadcast and it is assumed it was working
