@@ -141,6 +141,7 @@
       "platform": "INTERNETVOD",
       "lastModified": 1369760183436,
       "publishStart": 1369758589000,
+      "publishStop": 1469758590000,
       "urn": "urn:vpro:media:location:26079425"
     },
     {
@@ -155,6 +156,7 @@
       "platform": "INTERNETVOD",
       "lastModified": 1493122309612,
       "publishStart": 1369758589000,
+      "publishStop": 1469758590000,
       "urn": "urn:vpro:media:location:92956589"
     },
     {
