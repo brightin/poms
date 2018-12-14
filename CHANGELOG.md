@@ -1,5 +1,9 @@
 # Poms Release notes
 
+## 2.4.0
+
+* Add functions for getting `publish_start` and `publish_stop` from Poms in `Poms::Fields`.
+
 ## 2.3.1
 
 * Add `Poms::Fields.descendants_of` which returns all descendantOf's of specific type.
