@@ -2,13 +2,15 @@ require 'poms/timestamp'
 
 module Poms
   module Fields
+    # modeule to retrieve scheduling/timtable related information from
+    # poms items.
     module Schedule
-
+      # robocop:disable Style/ModuleFunction
       extend self
 
       # Returns an array of odi stream types.
-      # Note: this code is copied from Broadcast and it is assumed it was working
-      # there.
+      # Note: this code is copied from Broadcast
+      # and it is assumed it was working there.
       def odi_streams(item)
         locations = item['locations']
         return [] if locations.nil? || locations.empty?
@@ -20,9 +22,9 @@ module Poms
       end
 
       # Returns an array of start and end times for the  scheduled events for
-      # this item. It returns an empty array if no events are found. You can pass
-      # in a block to filter the events on data that is not returned, like
-      # channel.
+      # this item. It returns an empty array if no events are found.
+      # You can pass in a block to filter the events on data that is not
+      # returned, like channel.
       #
       # @param item The Poms hash
       def schedule_events(item)

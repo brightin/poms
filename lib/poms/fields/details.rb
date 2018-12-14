@@ -1,8 +1,9 @@
 require 'poms/timestamp'
 module Poms
   module Fields
+    # Module to find details from for ex. attributes on poms items.
     module Details
-
+      # robocop:disable Style/ModuleFunction
       extend self
 
       # Returns the title, main by default
@@ -69,13 +70,14 @@ module Poms
 
       # Returns an array containing zero or more content ratings of the item
       # Possible content ratings are:
-      # ANGST, DISCRIMINATIE, DRUGS_EN_ALCOHOL, GEWELD, GROF_TAALGEBRUIK and SEKS
+      # ANGST, DISCRIMINATIE, DRUGS_EN_ALCOHOL, GEWELD, GROF_TAALGEBRUIK and
+      # SEKS
       def content_ratings(item)
         item.fetch('contentRatings', [])
       end
 
-      # Poms has arrays of hashes for some types that have a value and type. This
-      # is a way to access those simply.
+      # Poms has arrays of hashes for some types that have a value and type.
+      # This is a way to access those simply.
       #
       # Example:
       #    item = {'titles' => [{'value' => 'Main title', 'type' => 'MAIN'},

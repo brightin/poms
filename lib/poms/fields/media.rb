@@ -1,7 +1,8 @@
 module Poms
   module Fields
+    # Module to retrieve media related information from poms items.
     module Media
-
+      # robocop:disable Style/ModuleFunction
       extend self
 
       IMAGE_TYPE_PRIORITY = %w[PROMO_LANDSCAPE PICTURE].freeze

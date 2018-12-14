@@ -20,17 +20,17 @@ module Poms
         end
       end
 
-      describe ".publish_start" do
-        it "returns the proper publish start date of a publication" do
+      describe '.publish_start' do
+        it 'returns the proper publish start date of a publication' do
           expect(described_class.publish_start(poms_data))
-            .to eq("Tue, 28 May 2013 18:29:49 +0200")
+            .to eq('Tue, 28 May 2013 18:29:49 +0200')
         end
       end
 
-      describe ".publish_stop" do
-        it "returns the proper publish stop date of a publication" do
+      describe '.publish_stop' do
+        it 'returns the proper publish stop date of a publication' do
           expect(described_class.publish_stop(poms_data))
-            .to eq("Fri, 29 Jul 2016 04:16:30 +0200")
+            .to eq('Fri, 29 Jul 2016 04:16:30 +0200')
         end
       end
 

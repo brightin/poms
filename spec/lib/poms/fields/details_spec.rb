@@ -56,8 +56,6 @@ naar hun loods, maar is dat wel een goed idee?")
         end
       end
 
-
-
       describe '.mid' do
         it 'returns the mid' do
           expect(described_class.mid(poms_data)).to eq('KRO_1614405')
@@ -87,12 +85,14 @@ naar hun loods, maar is dat wel een goed idee?")
 
         context 'when given an ancestor midRef' do
           it "returns the clip's index in that parent" do
-            pos = described_class.position(clip, member_of: 'POMS_S_ZAPP_4110813')
+            pos = described_class
+              .position(clip, member_of: 'POMS_S_ZAPP_4110813')
             expect(pos).to be(1)
           end
 
           it 'returns nil if no matching parent found' do
-            expect(described_class.position(clip, member_of: 'nobody')).to be_nil
+            expect(described_class.position(clip, member_of: 'nobody'))
+              .to be_nil
           end
         end
       end
