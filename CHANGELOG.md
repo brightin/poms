@@ -1,5 +1,9 @@
 # Poms Release notes
 
+## 2.5.0
+
+* Filter out publications with `owner` `NEBO`.
+
 ## 2.4.0
 
 * Add functions for getting `publish_start` and `publish_stop` from Poms in `Poms::Fields`.
