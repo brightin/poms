@@ -33,11 +33,13 @@ module Poms
       end
 
       # Returns the first publication from an items location array which has
-      # INTERNETVOD and is PUBLISHED
+      # INTERNETVOD and is PUBLISHED and does not have owner NEBO.
       def publication(poms_item)
-        return if poms_item['locations'].blank?
-        poms_item['locations'].find do |item|
-          item['platform'] == 'INTERNETVOD' && item['workflow'] == 'PUBLISHED'
+        return if poms_item.fetch('locations', nil).blank?
+        poms_item.fetch('locations', []).find do |item|
+          item.fetch('platform', '') == 'INTERNETVOD' &&
+            item.fetch('workflow', '') == 'PUBLISHED' &&
+            item.fetch('owner', '') != 'NEBO'
         end
       end
 
