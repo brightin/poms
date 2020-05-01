@@ -20,6 +20,21 @@ module Poms
         end
       end
 
+      describe '.publication' do
+        it 'returns the first publication for PUBLISHED INTERNETVOD' do
+          expect(described_class.publication(poms_data))
+            .to include(
+              'platform' => 'INTERNETVOD',
+              'workflow' => 'PUBLISHED'
+            )
+        end
+
+        it 'does not return publication with owner NEBO' do
+          expect(described_class.publication(poms_data)['owner'])
+            .not_to eq('NEBO')
+        end
+      end
+
       describe '.publish_start' do
         it 'returns the proper publish start date of a publication' do
           expect(described_class.publish_start(poms_data))

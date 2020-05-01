@@ -131,6 +131,24 @@
   ],
   "locations": [
     {
+      "programUrl": "odi+http://odi.omroep.nl/video/h264_sb/KRO_1614405",
+      "avAttributes": {
+        "bitrate": 204800,
+        "avFileFormat": "MP4",
+        "videoAttributes": {
+          "videoCoding": "WM",
+          "aspectRatio": "16:9"
+        }
+      },
+      "owner": "NEBO",
+      "creationDate": 1369765721479,
+      "workflow": "PUBLISHED",
+      "platform": "INTERNETVOD",
+      "lastModified": 1369765721611,
+      "publishStart": 1369758589000,
+      "urn": "urn:vpro:media:location:26079907"
+    },
+    {
       "programUrl": "odip+http://odi.omroep.nl/video/adaptive/KRO_1614405",
       "avAttributes": {
         "avFileFormat": "HASP"
@@ -158,24 +176,6 @@
       "publishStart": 1369758589000,
       "publishStop": 1469758590000,
       "urn": "urn:vpro:media:location:92956589"
-    },
-    {
-      "programUrl": "odi+http://odi.omroep.nl/video/h264_sb/KRO_1614405",
-      "avAttributes": {
-        "bitrate": 204800,
-        "avFileFormat": "MP4",
-        "videoAttributes": {
-          "videoCoding": "WM",
-          "aspectRatio": "16:9"
-        }
-      },
-      "owner": "NEBO",
-      "creationDate": 1369765721479,
-      "workflow": "PUBLISHED",
-      "platform": "INTERNETVOD",
-      "lastModified": 1369765721611,
-      "publishStart": 1369758589000,
-      "urn": "urn:vpro:media:location:26079907"
     },
     {
       "programUrl": "odi+http://odi.omroep.nl/video/h264_bb/KRO_1614405",
