@@ -1,8 +1,14 @@
 # Poms Release notes
 
+## 2.5.1
+
+* Actually filter out publications with `owner` `NEBO`.
+
 ## 2.5.0
 
-* Filter out publications with `owner` `NEBO`.
+* ~Filter out publications with `owner` `NEBO`.~
+
+Due to an error this version does not include the mentioned change.
 
 ## 2.4.0
 
