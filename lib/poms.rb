@@ -6,6 +6,7 @@ require 'poms/api/request'
 require 'poms/errors'
 require 'poms/api/search'
 require 'poms/configuration'
+require 'poms/fields'
 require 'json'
 
 # Main interface for the POMS gem
