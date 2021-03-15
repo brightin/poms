@@ -1,5 +1,9 @@
 # Poms Release notes
 
+## 2.6.0
+
+* Include `Poms::Fields` in the main library file.
+
 ## 2.5.1
 
 * Actually filter out publications with `owner` `NEBO`.
